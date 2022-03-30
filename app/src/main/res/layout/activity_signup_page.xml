@@ -221,6 +221,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:passwordToggleDrawable="@drawable/app_logo"
             app:passwordToggleTint="#7A807B"
             app:placeholderText="Enter password"
             app:placeholderTextColor="#7A807B">
@@ -229,6 +230,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:fontFamily="@font/plusjakartadisplay_medium"
+                android:inputType="textPassword"
                 android:paddingTop="10dp"
                 android:textAlignment="textStart"
                 android:textColor="#223528"
