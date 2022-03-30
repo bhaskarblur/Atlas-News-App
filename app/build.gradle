@@ -68,6 +68,7 @@ dependencies {
     def arch_version = "2.1.0"
     implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
     //noinspection GradleDependency
+    implementation 'com.google.android.material:material:1.4.0'
     implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
     implementation 'androidx.core:core:1.6.0'
