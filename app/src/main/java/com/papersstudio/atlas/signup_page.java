@@ -13,42 +13,55 @@ import com.papersstudio.atlas.databinding.ActivitySignupPageBinding;
 public class signup_page extends AppCompatActivity {
     private ActivitySignupPageBinding binding;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-    SharedPreferences saveprefs=getSharedPreferences("userlogged",0);
-    SharedPreferences getprefs=getSharedPreferences("userlogged",0);
+    SharedPreferences saveprefs;
+    SharedPreferences getprefs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding=ActivitySignupPageBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         this.getSupportActionBar().hide();
-
+        saveprefs=this.getSharedPreferences("userlogged",0);
+        getprefs=this.getSharedPreferences("userlogged",0);
         viewfuncs();
         uiEvent();
     }
 
     private void uiEvent() {
+        binding.googleLay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(signup_page.this, "Google Auth is currently unavailable.", Toast.LENGTH_SHORT).show();
+            }
+        });
+        binding.facebookLay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(signup_page.this, "Facebook Auth is currently unavailable.", Toast.LENGTH_SHORT).show();
+            }
+        });
         binding.signupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(binding.nameField.getEditText().toString().equals(null)){
-                    binding.nameField.setErrorContentDescription("Please enter your name");
+                if(binding.name.getText().toString().isEmpty()){
+                    binding.name.setError("Please enter your name");
                     Toast.makeText(signup_page.this, "Please enter your name", Toast.LENGTH_SHORT).show();
                 }
-                else if(binding.emailField.getEditText().toString().equals(null)){
-                    binding.emailField.setErrorContentDescription("Please enter your email address");
+                else if(binding.email.getText().toString().isEmpty()){
+                    binding.email.setError("Please enter your email address");
                     Toast.makeText(signup_page.this, "Please enter your email address", Toast.LENGTH_SHORT).show();
                 }
-                else if(!binding.emailField.getEditText().toString().matches(emailPattern)){
-                    binding.emailField.setErrorContentDescription("Please enter a valid email address");
+                else if(!binding.email.getText().toString().trim().matches(emailPattern)){
+                    binding.email.setError("Please enter a valid email address");
                     Toast.makeText(signup_page.this, "Please enter a valid email address", Toast.LENGTH_SHORT).show();
                 }
-                else if(binding.passowrdField.getEditText().toString().equals(null)){
-                    binding.passowrdField.setErrorContentDescription("Please enter your password");
+                else if(binding.password.getText().toString().equals(null)){
+                    binding.password.setError("Please enter your password");
                     Toast.makeText(signup_page.this, "Please enter your password", Toast.LENGTH_SHORT).show();
                 }
 
-                else if(binding.passowrdField.getEditText().toString().length()<6){
-                    binding.passowrdField.setErrorContentDescription("Please enter a password of atleast 6 characters");
+                else if(binding.password.getText().toString().length()<6){
+                    binding.password.setError("Please enter a password of atleast 6 characters");
                     Toast.makeText(signup_page.this, "Please enter a password of atleast 6 characters", Toast.LENGTH_SHORT).show();
                 }
                 else{
@@ -56,7 +69,7 @@ public class signup_page extends AppCompatActivity {
                     binding.signupBtn.setVisibility(View.INVISIBLE);
                     SharedPreferences.Editor editor=saveprefs.edit();
                     editor.putString("username",binding.nameField.getEditText().toString());
-                    editor.putString("email",binding.emailField.getEditText().toString());
+                    editor.putString("email",binding.emailField.getEditText().toString().trim());
                     Toast.makeText(signup_page.this, "Account Created", Toast.LENGTH_SHORT).show();
                 }
             }

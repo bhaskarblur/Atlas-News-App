@@ -122,10 +122,12 @@
                     app:placeholderTextColor="#7A807B">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name"
                         android:layout_width="match_parent"
                         android:layout_height="52dp"
                         android:fontFamily="@font/plusjakartadisplay_medium"
                         android:paddingTop="10dp"
+                        android:singleLine="true"
                         android:textAlignment="textStart"
                         android:textColor="#223528"
                         android:textColorHint="#7A807B"
@@ -189,10 +191,12 @@
                     app:placeholderTextColor="#7A807B">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/email"
                         android:layout_width="match_parent"
                         android:layout_height="52dp"
                         android:fontFamily="@font/plusjakartadisplay_medium"
                         android:paddingTop="10dp"
+                        android:singleLine="true"
                         android:textAlignment="textStart"
                         android:textColor="#223528"
                         android:textColorHint="#7A807B"
@@ -255,12 +259,14 @@
                     app:placeholderTextColor="#7A807B">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/password"
                         android:layout_width="match_parent"
                         android:layout_height="52dp"
                         android:fontFamily="@font/plusjakartadisplay_medium"
                         android:inputType="textPassword"
                         android:paddingTop="10dp"
                         android:password="true"
+                        android:singleLine="true"
                         android:textAlignment="textStart"
                         android:textColor="#223528"
                         android:textColorHint="#7A807B"
