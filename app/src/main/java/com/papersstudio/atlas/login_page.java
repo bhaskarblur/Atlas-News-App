@@ -82,6 +82,8 @@ public class login_page extends AppCompatActivity {
                             editor.putString("email",binding.email.getText().toString().trim());
                             editor.commit();
                             Toast.makeText(login_page.this, "Welcome back!", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(login_page.this,HomeActivity.class));
+                            finish();
                         }
                     },1500);
 
@@ -94,6 +96,8 @@ public class login_page extends AppCompatActivity {
         String logged=getprefs.getString("logged","no");
         if(logged.equals("yes")) {
             //continue to home page
+            startActivity(new Intent(login_page.this,HomeActivity.class));
+            finish();
         }
         String text = "<font color=#707671>New to Atlas?</font> <font color=#47A36C>Sign up</font>";
         binding.signinTxt.setText(Html.fromHtml(text));

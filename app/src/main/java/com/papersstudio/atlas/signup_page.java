@@ -100,6 +100,8 @@ public class signup_page extends AppCompatActivity {
         String logged=getprefs.getString("logged","no");
         if(logged.equals("yes")) {
             //continue to home page
+            startActivity(new Intent(signup_page.this,HomeActivity.class));
+            finish();
         }
         String text = "<font color=#707671>Have an account?</font> <font color=#47A36C>Log in</font>";
         binding.loginTxt.setText(Html.fromHtml(text));
