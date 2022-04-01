@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Html;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
@@ -72,12 +73,18 @@ public class login_page extends AppCompatActivity {
                 else{
                     binding.progressBar.setVisibility(View.VISIBLE);
                     binding.loginBtn.setVisibility(View.INVISIBLE);
-                    SharedPreferences.Editor editor=saveprefs.edit();
-                    editor.putString("logged","yes");
-                   // editor.putString("username",binding.name.getText().toString());
-                    editor.putString("email",binding.email.getText().toString().trim());
-                    editor.commit();
-                    Toast.makeText(login_page.this, "Welcome back!", Toast.LENGTH_SHORT).show();
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            SharedPreferences.Editor editor=saveprefs.edit();
+                            editor.putString("logged","yes");
+                            // editor.putString("username",binding.name.getText().toString());
+                            editor.putString("email",binding.email.getText().toString().trim());
+                            editor.commit();
+                            Toast.makeText(login_page.this, "Welcome back!", Toast.LENGTH_SHORT).show();
+                        }
+                    },1500);
+
                 }
             }
         });

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Html;
 import android.view.View;
 import android.widget.Toast;
@@ -34,7 +35,7 @@ public class signup_page extends AppCompatActivity {
             public void onClick(View view) {
                 startActivity(new Intent(signup_page.this,login_page.class));
                 finish();
-                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
+                overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_left);
             }
         });
         binding.googleLay.setOnClickListener(new View.OnClickListener() {
@@ -77,11 +78,19 @@ public class signup_page extends AppCompatActivity {
                     binding.progressBar.setVisibility(View.VISIBLE);
                     binding.signupBtn.setVisibility(View.INVISIBLE);
                     SharedPreferences.Editor editor=saveprefs.edit();
-                    editor.putString("logged","yes");
-                    editor.putString("username",binding.name.getText().toString());
-                    editor.putString("email",binding.email.getText().toString().trim());
-                    editor.commit();
-                    Toast.makeText(signup_page.this, "Account created!", Toast.LENGTH_SHORT).show();
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            editor.putString("logged","yes");
+                            editor.putString("username",binding.name.getText().toString());
+                            editor.putString("email",binding.email.getText().toString().trim());
+                            editor.commit();
+                            Toast.makeText(signup_page.this, "Account created!", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(signup_page.this,registration_complete.class));
+                            finish();
+                        }
+                    },1500);
+
                 }
             }
         });

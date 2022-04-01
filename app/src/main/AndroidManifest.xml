@@ -22,12 +22,19 @@
         android:theme="@style/Theme.Atlas"
         android:usesCleartextTraffic="true">
         <activity
+            android:screenOrientation="portrait"
+            android:name=".registration_complete"
+            android:exported="false" />
+        <activity
+            android:screenOrientation="portrait"
             android:name=".login_page"
             android:exported="false" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".signup_page"
             android:exported="false" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".splashscreen"
             android:exported="true">
             <intent-filter>
