@@ -22,6 +22,9 @@
         android:theme="@style/Theme.Atlas"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".login_page"
+            android:exported="false" />
+        <activity
             android:name=".signup_page"
             android:exported="false" />
         <activity
