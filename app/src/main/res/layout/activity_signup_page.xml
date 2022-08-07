@@ -178,7 +178,7 @@
                     app:boxCornerRadiusBottomStart="8dp"
                     app:boxCornerRadiusTopEnd="8dp"
                     app:boxCornerRadiusTopStart="8dp"
-                    app:boxStrokeColor="#47A36C"
+                    app:boxStrokeColor="#262726"
                     app:boxStrokeWidth="0dp"
                     app:boxStrokeWidthFocused="1dp"
                     app:expandedHintEnabled="false"
