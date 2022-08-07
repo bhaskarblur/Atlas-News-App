@@ -27,9 +27,21 @@ public class signup_page extends AppCompatActivity {
         getprefs=this.getSharedPreferences("userlogged",0);
         viewfuncs();
         uiEvent();
+        checkAuth();
+    }
+
+    private void checkAuth() {
+        String loginStatus= getprefs.getString("logged","no");
+        if(loginStatus.equals("yes")){
+            startActivity(new Intent(signup_page.this,HomeActivity.class));
+            finish();
+            overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_left);
+        }
+
     }
 
     private void uiEvent() {
+        binding.facebookLay.setClickable(false);
         binding.loginTxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,7 +59,7 @@ public class signup_page extends AppCompatActivity {
         binding.facebookLay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(signup_page.this, "Facebook Auth is currently unavailable.", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(signup_page.this, "Facebook Auth is currently unavailable.", Toast.LENGTH_SHORT).show();
             }
         });
         binding.signupBtn.setOnClickListener(new View.OnClickListener() {
@@ -98,11 +110,6 @@ public class signup_page extends AppCompatActivity {
 
     private void viewfuncs(){
         String logged=getprefs.getString("logged","no");
-        if(logged.equals("yes")) {
-            //continue to home page
-            startActivity(new Intent(signup_page.this,HomeActivity.class));
-            finish();
-        }
         String text = "<font color=#707671>Have an account?</font> <font color=#47A36C>Log in</font>";
         binding.loginTxt.setText(Html.fromHtml(text));
 

@@ -30,8 +30,17 @@ public class login_page extends AppCompatActivity {
         getprefs=this.getSharedPreferences("userlogged",0);
         viewfuncs();
         uiEvent();
+        checkAuth();
     }
+    private void checkAuth() {
+        String loginStatus= getprefs.getString("logged","no");
+        if(loginStatus.equals("yes")){
+            startActivity(new Intent(login_page.this,HomeActivity.class));
+            finish();
+            overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_left);
+        }
 
+    }
     private void uiEvent() {
         binding.signinTxt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,7 +59,7 @@ public class login_page extends AppCompatActivity {
         binding.facebookLay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(login_page.this, "Facebook Auth is currently unavailable.", Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(login_page.this, "Facebook Auth is currently unavailable.", Toast.LENGTH_SHORT).show();
             }
         });
         binding.loginBtn.setOnClickListener(new View.OnClickListener() {
@@ -93,12 +102,8 @@ public class login_page extends AppCompatActivity {
     }
 
     private void viewfuncs(){
-        String logged=getprefs.getString("logged","no");
-        if(logged.equals("yes")) {
-            //continue to home page
-            startActivity(new Intent(login_page.this,HomeActivity.class));
-            finish();
-        }
+        binding.facebookLay.setClickable(false);
+
         String text = "<font color=#707671>New to Atlas?</font> <font color=#47A36C>Sign up</font>";
         binding.signinTxt.setText(Html.fromHtml(text));
         SpannableString content = new SpannableString("Need help logging?");
