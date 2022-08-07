@@ -26,16 +26,16 @@ public class HomeActivity extends AppCompatActivity {
         binding.homelayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Picasso.get().load(R.drawable.home_selected_icon).into(binding.homeIcon);
+                Picasso.get().load(R.drawable.ic_homeselected).into(binding.homeIcon);
                 binding.homeTxt.setTextColor(Color.parseColor("#47A36C"));
 
-                Picasso.get().load(R.drawable.trending_icon).into(binding.trendingIcon);
+                Picasso.get().load(R.drawable.ic_trending).into(binding.trendingIcon);
                 binding.trendingTxt.setTextColor(Color.parseColor("#9BA79E"));
 
-                Picasso.get().load(R.drawable.bookmark_icon).into(binding.savedIcon);
+                Picasso.get().load(R.drawable.ic_bookmark).into(binding.savedIcon);
                 binding.savedTxt.setTextColor(Color.parseColor("#9BA79E"));
 
-                Picasso.get().load(R.drawable.profile_icon).into(binding.profileIcon);
+                Picasso.get().load(R.drawable.ic_profile).into(binding.profileIcon);
                 binding.profileTxt.setTextColor(Color.parseColor("#9BA79E"));
 
                 homeFragment homeFragment=new homeFragment();
@@ -50,16 +50,16 @@ public class HomeActivity extends AppCompatActivity {
         binding.trendinglayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Picasso.get().load(R.drawable.homeicon).into(binding.homeIcon);
+                Picasso.get().load(R.drawable.ic_home).into(binding.homeIcon);
                 binding.homeTxt.setTextColor(Color.parseColor("#9BA79E"));
 
-                Picasso.get().load(R.drawable.trending_selected_icon).into(binding.trendingIcon);
+                Picasso.get().load(R.drawable.ic_trendingselected).into(binding.trendingIcon);
                 binding.trendingTxt.setTextColor(Color.parseColor("#47A36C"));
 
-                Picasso.get().load(R.drawable.bookmark_icon).into(binding.savedIcon);
+                Picasso.get().load(R.drawable.ic_bookmark).into(binding.savedIcon);
                 binding.savedTxt.setTextColor(Color.parseColor("#9BA79E"));
 
-                Picasso.get().load(R.drawable.profile_icon).into(binding.profileIcon);
+                Picasso.get().load(R.drawable.ic_profile).into(binding.profileIcon);
                 binding.profileTxt.setTextColor(Color.parseColor("#9BA79E"));
 
                 homeFragment homeFragment=new homeFragment();
@@ -73,16 +73,16 @@ public class HomeActivity extends AppCompatActivity {
         binding.savedlayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Picasso.get().load(R.drawable.homeicon).into(binding.homeIcon);
+                Picasso.get().load(R.drawable.ic_home).into(binding.homeIcon);
                 binding.homeTxt.setTextColor(Color.parseColor("#9BA79E"));
 
-                Picasso.get().load(R.drawable.trending_icon).into(binding.trendingIcon);
+                Picasso.get().load(R.drawable.ic_trending).into(binding.trendingIcon);
                 binding.trendingTxt.setTextColor(Color.parseColor("#9BA79E"));
 
-                Picasso.get().load(R.drawable.save_selected_icon).into(binding.savedIcon);
+                Picasso.get().load(R.drawable.ic_bookmarkselected).into(binding.savedIcon);
                 binding.savedTxt.setTextColor(Color.parseColor("#47A36C"));
 
-                Picasso.get().load(R.drawable.profile_icon).into(binding.profileIcon);
+                Picasso.get().load(R.drawable.ic_profile).into(binding.profileIcon);
                 binding.profileTxt.setTextColor(Color.parseColor("#9BA79E"));
 
                 homeFragment homeFragment=new homeFragment();
@@ -96,16 +96,16 @@ public class HomeActivity extends AppCompatActivity {
         binding.profilelayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Picasso.get().load(R.drawable.homeicon).into(binding.homeIcon);
+                Picasso.get().load(R.drawable.ic_home).into(binding.homeIcon);
                 binding.homeTxt.setTextColor(Color.parseColor("#9BA79E"));
 
-                Picasso.get().load(R.drawable.trending_icon).into(binding.trendingIcon);
+                Picasso.get().load(R.drawable.ic_trending).into(binding.trendingIcon);
                 binding.trendingTxt.setTextColor(Color.parseColor("#9BA79E"));
 
-                Picasso.get().load(R.drawable.bookmark_icon).into(binding.savedIcon);
+                Picasso.get().load(R.drawable.ic_bookmark).into(binding.savedIcon);
                 binding.savedTxt.setTextColor(Color.parseColor("#9BA79E"));
 
-                Picasso.get().load(R.drawable.profile_selected_icon).into(binding.profileIcon);
+                Picasso.get().load(R.drawable.ic_profileselected).into(binding.profileIcon);
                 binding.profileTxt.setTextColor(Color.parseColor("#47A36C"));
 
                 homeFragment homeFragment=new homeFragment();
