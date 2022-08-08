@@ -6,7 +6,7 @@
         <item name="colorPrimaryVariant">@color/back_white</item>
         <item name="colorOnPrimary">@color/back_white</item>
         <!-- Secondary brand color. -->
-        <item name="android:textColorPrimaryInverse">@color/white</item>
+        <item name="android:textColorPrimaryInverse">#E9EDEB</item>
         <item name="android:textColorSecondary">#707671</item>
         <item name="android:textColorPrimary">#223528</item>
         <item name="colorSecondary">@color/green_color</item>

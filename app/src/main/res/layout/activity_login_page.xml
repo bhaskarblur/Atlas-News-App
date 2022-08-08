@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fdfdfd"
+    android:background="?android:colorPrimary"
     tools:context=".login_page">
 
     <androidx.core.widget.NestedScrollView
@@ -27,7 +27,7 @@
                 android:letterSpacing="0.01"
                 android:text="Welcome To Atlas"
                 android:textAlignment="center"
-                android:textColor="#223528"
+                android:textColor="?android:textColorPrimary"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +47,7 @@
 
                 android:text="Login to continue, sign up if you are new to Atlas."
                 android:textAlignment="center"
-                android:textColor="#707671"
+                android:textColor="?android:textColorSecondary"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +64,7 @@
                 android:letterSpacing="0.01"
                 android:text="New to Atlas? Sign up"
                 android:textAlignment="center"
-                android:textColor="#707671"
+                android:textColor="?android:textColorPrimary"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -82,7 +82,7 @@
                 android:letterSpacing="0.01"
                 android:text="Need help logging?"
                 android:textAlignment="center"
-                android:textColor="#707671"
+                android:textColor="?android:textColorSecondary"
                 android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -107,7 +107,7 @@
                     android:letterSpacing="0.01"
                     android:text="Email"
                     android:textAlignment="textStart"
-                    android:textColor="#223528"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="15sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -123,7 +123,7 @@
                     android:baselineAligned="false"
                     android:hint="Enter your name"
                     android:outlineProvider="none"
-                    app:boxBackgroundColor="#E9EDEB"
+                    app:boxBackgroundColor="?android:textColorPrimaryInverse"
                     app:boxBackgroundMode="outline"
                     app:boxCornerRadiusBottomEnd="8dp"
                     app:boxCornerRadiusBottomStart="8dp"
@@ -134,13 +134,13 @@
                     app:boxStrokeWidthFocused="1dp"
                     app:expandedHintEnabled="false"
                     app:hintEnabled="false"
-                    app:hintTextColor="#7A807B"
+                    app:hintTextColor="?android:textColorSecondary"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView4"
                     app:passwordToggleTint="#7A807B"
-                    app:placeholderText="Enter useremail"
-                    app:placeholderTextColor="#7A807B">
+                    app:placeholderText="Enter username"
+                    app:placeholderTextColor="?android:textColorSecondary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/email"
@@ -177,7 +177,7 @@
                     android:letterSpacing="0.01"
                     android:text="Password"
                     android:textAlignment="textStart"
-                    android:textColor="#223528"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="15sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -191,7 +191,7 @@
                     android:layout_marginEnd="24dp"
                     android:baselineAligned="false"
                     android:outlineProvider="none"
-                    app:boxBackgroundColor="#E9EDEB"
+                    app:boxBackgroundColor="?android:textColorPrimaryInverse"
                     app:boxBackgroundMode="outline"
                     app:boxCornerRadiusBottomEnd="8dp"
                     app:boxCornerRadiusBottomStart="8dp"
@@ -202,14 +202,14 @@
                     app:boxStrokeWidthFocused="1dp"
                     app:expandedHintEnabled="false"
                     app:hintEnabled="false"
-                    app:hintTextColor="#7A807B"
+                    app:hintTextColor="?android:textColorSecondary"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView5"
                     app:passwordToggleEnabled="true"
                     app:passwordToggleTint="#7A807B"
                     app:placeholderText="Enter password"
-                    app:placeholderTextColor="#7A807B">
+                    app:placeholderTextColor="?android:textColorSecondary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/password"
@@ -321,6 +321,7 @@
                 android:layout_marginEnd="8dp"
                 android:clickable="true"
                 android:foreground="?android:selectableItemBackground"
+                app:cardBackgroundColor="?android:textColorPrimaryInverse"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="1.2dp"
                 app:layout_constraintEnd_toStartOf="@+id/facebook_btn"
@@ -331,7 +332,7 @@
                     android:id="@+id/google_lay"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#FFFFFF"
+                    android:background="?android:textColorPrimaryInverse"
                     android:clickable="true"
                     android:foreground="?android:selectableItemBackground">
 
@@ -355,7 +356,7 @@
                         android:text="Google"
                         android:textAlignment="center"
 
-                        android:textColor="#223528"
+                        android:textColor="?android:textColorPrimary"
                         android:textSize="15sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
