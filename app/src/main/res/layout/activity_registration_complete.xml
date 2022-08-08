@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fdfdfd"
+    android:background="?android:colorPrimary"
     tools:context=".registration_complete">
 
     <TextView
@@ -18,7 +18,7 @@
         android:letterSpacing="0.01"
         android:text="Registration Complete!"
         android:textAlignment="center"
-        android:textColor="#223528"
+        android:textColor="?android:textColorPrimary"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView8"
@@ -37,7 +37,7 @@
         android:letterSpacing="0.01"
         android:text="Your registration is completed. Welcome to the extreme experience of Atlas."
         android:textAlignment="center"
-        android:textColor="#707671"
+        android:textColor="?android:textColorSecondary"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/continue_btn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,7 +50,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="90dp"
-        android:backgroundTint="#47A36C"
+        android:backgroundTint="@color/green_color"
         android:fontFamily="@font/plusjakartadisplay_bold"
         android:insetTop="0dp"
         android:insetBottom="0dp"

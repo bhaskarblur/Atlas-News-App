@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fdfdfd"
+    android:background="?android:colorPrimary"
     tools:context=".HomeActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/navbar_bg"
+        android:background="?android:colorPrimary"
         app:cardBackgroundColor="@android:color/transparent"
         app:cardElevation="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:background="@drawable/navbar_bg"
-            android:backgroundTint="#ffffff">
+            android:backgroundTint="?android:colorPrimary">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/profilelayout"
