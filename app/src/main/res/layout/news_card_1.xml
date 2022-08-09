@@ -17,8 +17,9 @@
         android:id="@+id/news_layout"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
-        android:background="#ffffff"
-        android:clickable="true">
+        android:clickable="true"
+        android:background="?android:colorBackground"
+        tools:targetApi="n_mr1">
 
         <ImageView
             android:id="@+id/news_image"
@@ -45,7 +46,7 @@
             android:letterSpacing="0.01"
             android:text="This is the headline of the news and more..."
             android:textAlignment="textStart"
-            android:textColor="#223528"
+            android:textColor="?android:textColorPrimary"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -63,7 +64,7 @@
             android:letterSpacing="0.01"
             android:text="BBC News"
             android:textAlignment="textStart"
-            android:textColor="#707671"
+            android:textColor="?android:textColorSecondary"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

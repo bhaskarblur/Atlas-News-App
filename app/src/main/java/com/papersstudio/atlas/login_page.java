@@ -15,6 +15,11 @@ import android.widget.Toast;
 import com.papersstudio.atlas.databinding.ActivityLoginPageBinding;
 import com.papersstudio.atlas.databinding.ActivitySignupPageBinding;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class login_page extends AppCompatActivity {
     private ActivityLoginPageBinding binding;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
@@ -86,9 +91,12 @@ public class login_page extends AppCompatActivity {
                         @Override
                         public void run() {
                             SharedPreferences.Editor editor=saveprefs.edit();
+                            DateFormat dateFormat = new SimpleDateFormat("dd MMM, yyyy");
+                            Date date = Calendar.getInstance().getTime();
                             editor.putString("logged","yes");
-                            // editor.putString("username",binding.name.getText().toString());
+                           // editor.putString("username",binding.name.getText().toString());
                             editor.putString("email",binding.email.getText().toString().trim());
+                            editor.putString("joinDate",String.valueOf(dateFormat.format(date)));
                             editor.commit();
                             Toast.makeText(login_page.this, "Welcome back!", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(login_page.this,HomeActivity.class));

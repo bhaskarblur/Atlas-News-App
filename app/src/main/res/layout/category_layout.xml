@@ -15,7 +15,7 @@
         android:id="@+id/category_layout"
         android:layout_width="wrap_content"
         android:layout_height="42dp"
-        android:background="#ffffff">
+        android:background="?android:colorBackground">
 
         <TextView
             android:id="@+id/category_name"
@@ -29,7 +29,7 @@
             android:letterSpacing="0.01"
             android:text="Category Name"
             android:textAlignment="center"
-            android:textColor="#223528"
+            android:textColor="?android:textColorPrimary"
             android:textSize="13.5sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

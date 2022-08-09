@@ -151,7 +151,7 @@
                         android:paddingTop="10dp"
                         android:singleLine="true"
                         android:textAlignment="textStart"
-                        android:textColor="#223528"
+                        android:textColor="?android:textColorPrimary"
                         android:textColorHint="#7A807B"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -221,7 +221,7 @@
                         android:password="true"
                         android:singleLine="true"
                         android:textAlignment="textStart"
-                        android:textColor="#223528"
+                        android:textColor="?android:textColorPrimary"
                         android:textColorHint="#7A807B"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -305,7 +305,7 @@
                         android:text="Facebook"
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textSize="15sp"
+                        android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -314,7 +314,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/google_btn"
-                android:layout_width="148dp"
+                android:layout_width="140dp"
                 android:layout_height="52dp"
                 android:layout_marginStart="38dp"
                 android:layout_marginTop="36dp"
@@ -340,7 +340,7 @@
                         android:id="@+id/imageView2"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:layout_marginStart="25dp"
+                        android:layout_marginStart="23dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -350,14 +350,14 @@
                         android:id="@+id/textView6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="25dp"
+                        android:layout_marginEnd="23dp"
                         android:fontFamily="@font/plusjakartadisplay_bold"
                         android:letterSpacing="0.01"
                         android:text="Google"
                         android:textAlignment="center"
 
                         android:textColor="?android:textColorPrimary"
-                        android:textSize="15sp"
+                        android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />

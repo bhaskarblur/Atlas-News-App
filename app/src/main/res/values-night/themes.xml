@@ -4,17 +4,19 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/back_black</item>
         <item name="colorPrimaryVariant">@color/back_black</item>
-        <item name="colorOnPrimary">@color/back_black</item>
+        <item name="colorOnPrimary">#2D2F2D</item>
+        <item name="android:colorBackground">#2D2F2D</item>
         <!-- Secondary brand color. -->
         <item name="android:textColorPrimaryInverse">#2D2F2D</item>
-        <item name="colorSecondary">@color/green_color</item>
         <item name="android:textColorPrimary">#F0F4F2</item>
         <item name="android:textColorSecondary">#8E928F</item>
+        <item name="colorSecondary">@color/white</item>
         <item name="colorSecondaryVariant">@color/green_color</item>
         <item name="colorOnSecondary">@color/green_color</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/back_black</item>
-        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+
+
         <!-- Customize your theme here. -->
     </style>
 

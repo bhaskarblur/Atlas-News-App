@@ -12,6 +12,11 @@ import android.widget.Toast;
 
 import com.papersstudio.atlas.databinding.ActivitySignupPageBinding;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class signup_page extends AppCompatActivity {
     private ActivitySignupPageBinding binding;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
@@ -93,9 +98,12 @@ public class signup_page extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
+                            DateFormat dateFormat = new SimpleDateFormat("dd MMM, yyyy");
+                            Date date = Calendar.getInstance().getTime();
                             editor.putString("logged","yes");
                             editor.putString("username",binding.name.getText().toString());
                             editor.putString("email",binding.email.getText().toString().trim());
+                            editor.putString("joinDate",String.valueOf(dateFormat.format(date)));
                             editor.commit();
                             Toast.makeText(signup_page.this, "Account created!", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(signup_page.this,registration_complete.class));
