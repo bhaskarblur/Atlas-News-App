@@ -1,5 +1,6 @@
 package com.papersstudio.atlas;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -52,7 +53,20 @@ public class homeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding=FragmentHomeBinding.inflate(inflater,container,false);
+
+        ManageUIEvents();
         return binding.getRoot();
-        
+
+    }
+
+    private void ManageUIEvents() {
+        binding.searchlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(),searchActivity.class));
+                getActivity().overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_left);
+
+            }
+        });
     }
 }

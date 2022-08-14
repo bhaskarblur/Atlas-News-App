@@ -26,7 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="44dp"
+                android:layout_marginTop="34dp"
                 android:fontFamily="@font/plusjakartadisplay_bold"
                 android:letterSpacing="0.01"
                 android:text="Hello There! 👋"
@@ -129,9 +129,10 @@
                 android:id="@+id/searchbtn"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="28dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/navbar_bg"
+                android:clickable="true"
                 app:cardBackgroundColor="#ffffff"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="1.5dp"
@@ -144,7 +145,7 @@
                     android:layout_height="match_parent"
                     android:background="?android:colorBackground"
                     android:clickable="true"
-                   
+
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintTop_toTopOf="parent">

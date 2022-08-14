@@ -3,21 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Admin/StudioProjects/Atlas/app/src/main/res/layout/activity_signup_page.xml" value="0.5" />
+        <entry key="..\:/Users/Admin/StudioProjects/Atlas/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.196" />
+        <entry key="..\:/Users/Admin/StudioProjects/Atlas/app/src/main/res/drawable/ic_bookmark.xml" value="0.2875" />
+        <entry key="..\:/Users/Admin/StudioProjects/Atlas/app/src/main/res/drawable/ic_filter.xml" value="0.293" />
+        <entry key="..\:/Users/Admin/StudioProjects/Atlas/app/src/main/res/drawable/ic_home.xml" value="0.2875" />
+        <entry key="..\:/Users/Admin/StudioProjects/Atlas/app/src/main/res/drawable/ic_homeselected.xml" value="0.2875" />
+        <entry key="..\:/Users/Admin/StudioProjects/Atlas/app/src/main/res/drawable/ic_launcher_background.xml" value="0.196" />
+        <entry key="..\:/Users/Admin/StudioProjects/Atlas/app/src/main/res/drawable/ic_profile.xml" value="0.2875" />
+        <entry key="..\:/Users/Admin/StudioProjects/Atlas/app/src/main/res/drawable/ic_trending.xml" value="0.2875" />
+        <entry key="..\:/Users/Admin/StudioProjects/Atlas/app/src/main/res/drawable/ic_trendingselected.xml" value="0.2875" />
+        <entry key="..\:/Users/Admin/StudioProjects/Atlas/app/src/main/res/drawable/navbar_bg.xml" value="0.289" />
+        <entry key="..\:/Users/Admin/StudioProjects/Atlas/app/src/main/res/layout/activity_home.xml" value="0.33" />
+        <entry key="..\:/Users/Admin/StudioProjects/Atlas/app/src/main/res/layout/activity_login_page.xml" value="0.33" />
+        <entry key="..\:/Users/Admin/StudioProjects/Atlas/app/src/main/res/layout/activity_registration_complete.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/Admin/StudioProjects/Atlas/app/src/main/res/layout/activity_search.xml" value="0.33" />
+        <entry key="..\:/Users/Admin/StudioProjects/Atlas/app/src/main/res/layout/activity_signup_page.xml" value="0.33" />
         <entry key="..\:/Users/Admin/StudioProjects/Atlas/app/src/main/res/layout/activity_splashscreen.xml" value="0.33" />
-        <entry key="app/src/main/res/drawable/ic_home.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable/ic_homeselected.xml" value="0.1645" />
+        <entry key="..\:/Users/Admin/StudioProjects/Atlas/app/src/main/res/layout/category_layout.xml" value="0.67" />
+        <entry key="..\:/Users/Admin/StudioProjects/Atlas/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.21054852320675105" />
-        <entry key="app/src/main/res/drawable/ic_profile.xml" value="0.1" />
-        <entry key="app/src/main/res/layout-v25/news_card_1.xml" value="0.2421875" />
-        <entry key="app/src/main/res/layout/activity_home.xml" value="0.23463817333859122" />
-        <entry key="app/src/main/res/layout/activity_login_page.xml" value="0.3515680868435029" />
-        <entry key="app/src/main/res/layout/activity_registration_complete.xml" value="0.3020802171924446" />
-        <entry key="app/src/main/res/layout/activity_signup_page.xml" value="0.2253814697265625" />
+        <entry key="app/src/main/res/layout/activity_signup_page.xml" value="0.28125933085756094" />
         <entry key="app/src/main/res/layout/activity_splashscreen.xml" value="0.19514211383426286" />
-        <entry key="app/src/main/res/layout/category_layout.xml" value="0.3421020507812501" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2577895260928722" />
-        <entry key="app/src/main/res/layout/news_card_1.xml" value="0.43903350830078125" />
       </map>
     </option>
   </component>
@@ -26,12 +32,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.3635665036319347" />
-      </ProjectState>
-    </option>
   </component>
 </project>

@@ -22,6 +22,9 @@
         android:theme="@style/Theme.Atlas"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".searchActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity

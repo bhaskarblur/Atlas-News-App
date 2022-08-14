@@ -1,8 +1,12 @@
 package com.papersstudio.atlas;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +22,7 @@ import java.util.Date;
 
 public class HomeActivity extends AppCompatActivity {
     private ActivityHomeBinding binding;
+    private int backCount=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -128,4 +133,58 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
 
+
+
+    @Override
+    public void onBackPressed() {
+        if (getSupportFragmentManager().getBackStackEntryCount() != 0) {
+            getSupportFragmentManager().popBackStack();
+
+            if (getSupportFragmentManager().getBackStackEntryCount() < 2) {
+                // set the home tab as default;
+                binding.homeIcon.setImageResource(R.drawable.ic_homeselected);
+                binding.homeTxt.setTextColor(Color.parseColor("#47A36C"));
+
+                //Picasso.get().load(R.drawable.ic_trending).into(binding.trendingIcon);
+                binding.trendingIcon.setImageResource(R.drawable.ic_trending);
+                binding.trendingTxt.setTextColor(Color.parseColor("#9BA79E"));
+
+                // Picasso.get().load(R.drawable.ic_bookmark).into(binding.savedIcon);
+                binding.savedIcon.setImageResource(R.drawable.ic_bookmark);
+                binding.savedTxt.setTextColor(Color.parseColor("#9BA79E"));
+
+                // Picasso.get().load(R.drawable.ic_profile).into(binding.profileIcon);
+                binding.profileIcon.setImageResource(R.drawable.ic_profile);
+                binding.profileTxt.setTextColor(Color.parseColor("#9BA79E"));
+
+                homeFragment homeFragment=new homeFragment();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.setCustomAnimations(R.anim.fade_2, R.anim.fade);
+                transaction.replace(R.id.mainFragment, homeFragment);
+                transaction.commit();
+
+            }
+        } else {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this).setTitle("Exit?")
+                    .setMessage("Do you want to exit the app?")
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    });
+            builder.show();
+        }
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 }
