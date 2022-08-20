@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="38dp"
         android:layout_marginEnd="30dp"
         android:fontFamily="@font/plusjakartadisplay_medium"
         android:letterSpacing="0.01"
@@ -179,7 +179,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="150dp"
         android:background="?android:colorPrimary"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -206,13 +206,14 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="22dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="22dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView14"
-            tools:itemCount="1"
-            tools:listitem="@layout/news_card_1" />
+            tools:itemCount="4"
+            tools:listitem="@layout/news_card_2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout

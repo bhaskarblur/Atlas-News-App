@@ -22,6 +22,12 @@
         android:theme="@style/Theme.Atlas"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".single_news_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Single_category_activity"
+            android:exported="false" />
+        <activity
             android:name=".searchActivity"
             android:exported="false" />
         <activity

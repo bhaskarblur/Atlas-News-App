@@ -3,45 +3,49 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/news_card"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="2dp"
+    android:layout_marginLeft="1dp"
     android:layout_marginTop="2dp"
-    android:layout_marginRight="12dp"
-    android:layout_marginBottom="1dp"
+    android:layout_marginRight="2dp"
+    android:layout_marginBottom="10dp"
     android:clickable="true"
     app:cardCornerRadius="10dp"
-    app:cardElevation="2dp">
+    app:cardElevation="2dp"
+    tools:ignore="DuplicateClickableBoundsCheck">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/news_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="?android:colorBackground"
+        android:clickable="true"
         tools:targetApi="n_mr1">
 
         <ImageView
             android:id="@+id/news_image"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginStart="12dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="12dp"
+            android:layout_marginBottom="10dp"
             android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@color/green_color" />
 
         <TextView
             android:id="@+id/news_head"
-            android:layout_width="150dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="12dp"
+            android:layout_marginStart="14dp"
 
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/plusjakartadisplay_bold"
             android:letterSpacing="0.01"
             android:text="This is the headline of the news and more..."
@@ -50,16 +54,16 @@
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/news_image" />
+            app:layout_constraintStart_toEndOf="@+id/news_image"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/news_subhead"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="14dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="12dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/plusjakartadisplay_medium"
             android:letterSpacing="0.01"
             android:text="BBC News"
@@ -67,8 +71,7 @@
             android:textColor="?android:textColorSecondary"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/news_image"
             app:layout_constraintTop_toBottomOf="@+id/news_head" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
