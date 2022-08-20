@@ -36,7 +36,7 @@ public class homeNewsAdapter extends RecyclerView.Adapter<homeNewsAdapter.viewHo
 
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
-        holder.category_text.setText(modelList.get(position).getCategory_name());
+       // holder.category_text.setText(modelList.get(position).getCategory_name());
     }
 
     @Override
