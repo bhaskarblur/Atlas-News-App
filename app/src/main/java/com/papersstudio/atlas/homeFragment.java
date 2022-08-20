@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.papersstudio.atlas.Adapters.categoryAdapter;
 import com.papersstudio.atlas.databinding.FragmentHomeBinding;
 
 /**
@@ -27,6 +28,7 @@ public class homeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private FragmentHomeBinding binding;
+    private categoryAdapter categoryAdapter;
     public homeFragment() {
         // Required empty public constructor
     }
@@ -55,7 +57,17 @@ public class homeFragment extends Fragment {
         binding=FragmentHomeBinding.inflate(inflater,container,false);
 
         ManageUIEvents();
+        initUI();
+
         return binding.getRoot();
+
+    }
+
+    private void initUI() {
+
+    }
+
+    private void ManageDataCenter() {
 
     }
 
