@@ -77,7 +77,7 @@ public class HomeActivity extends AppCompatActivity {
                 binding.profileIcon.setImageResource(R.drawable.ic_profile);
                 binding.profileTxt.setTextColor(Color.parseColor("#9BA79E"));
 
-                homeFragment homeFragment=new homeFragment();
+                trendingFragment homeFragment=new trendingFragment();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.setCustomAnimations(R.anim.fade_2, R.anim.fade);
                 transaction.replace(R.id.mainFragment, homeFragment);
@@ -100,7 +100,7 @@ public class HomeActivity extends AppCompatActivity {
                 binding.profileIcon.setImageResource(R.drawable.ic_profile);
                 binding.profileTxt.setTextColor(Color.parseColor("#9BA79E"));
 
-                homeFragment homeFragment=new homeFragment();
+                savednewsFragment homeFragment=new savednewsFragment();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.setCustomAnimations(R.anim.fade_2, R.anim.fade);
                 transaction.replace(R.id.mainFragment, homeFragment);
@@ -124,7 +124,7 @@ public class HomeActivity extends AppCompatActivity {
                 binding.profileIcon.setImageResource(R.drawable.ic_profileselected);
                 binding.profileTxt.setTextColor(Color.parseColor("#47A36C"));
 
-                homeFragment homeFragment=new homeFragment();
+                profileFragment homeFragment=new profileFragment();
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.setCustomAnimations(R.anim.fade_2, R.anim.fade);
                 transaction.replace(R.id.mainFragment, homeFragment);
